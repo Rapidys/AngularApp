@@ -1,0 +1,9 @@
+
+<div *ngIf="errorService.error$ | async as error" class="absolute top-20 right-0 left-0 bg-red-500 text-white flex items-center justify-center p-4 m-2">
+  <div class="flex justify-between w-full">
+    {{error}}
+    <span class="cursor-pointer" (click)="errorService.clear()">&times;</span>
+  </div>
+
+
+</div>
