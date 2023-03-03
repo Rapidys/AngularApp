@@ -3,16 +3,35 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {ProductComponent} from "src/app/product/product.component";
+import {ProductComponent} from "src/app/components/product/product.component";
+import {HttpClientModule} from '@angular/common/http';
+import { GlobalErrorComponent } from './components/global-error/global-error.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FilterProductsPipe} from "src/app/pipes/filter-products.pipe";
+import { ModalComponent } from './components/modal/modal.component';
+import {CreateProductComponent} from "src/app/components/create-product/create-product.component";
+import {AppFocusDirective} from "src/app/directives/app-focus.directive";
+import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    GlobalErrorComponent,
+    FilterProductsPipe,
+    CreateProductComponent,
+    ModalComponent,
+    AppFocusDirective,
+    ProductPageComponent,
+    AboutPageComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

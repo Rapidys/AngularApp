@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input
+    type="text"
+    placeholder="title"
+    class="px-4 py-2 border border-green-300 w-full rounded"
+    formControlName="title"
+    appAppFocus
+  />
+
+  <p class="text-red-400 font-medium mb-2 mt-2" *ngIf="title.errors?.minlength && title.touched">Minimum symbol count is 6</p>
+  <button class="px-8 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg cursor-pointer mt-4" type="submit">Add</button>
+</form>
